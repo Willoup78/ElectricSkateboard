@@ -1,0 +1,26 @@
+13:05:56 **** Incremental Build of configuration Debug for project vesc_william ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+%cd%
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F405RGTx -DSTM32F4 -DSTM32 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -I"C:/Users/William/Documents/Projects/Electric_skateboard/Software/BLDC_William/vesc_william/inc" -I"C:/Users/William/Documents/Projects/Electric_skateboard/Software/BLDC_William/vesc_william/CMSIS/core" -I"C:/Users/William/Documents/Projects/Electric_skateboard/Software/BLDC_William/vesc_william/CMSIS/device" -I"C:/Users/William/Documents/Projects/Electric_skateboard/Software/BLDC_William/vesc_william/HAL_Driver/Inc/Legacy" -I"C:/Users/William/Documents/Projects/Electric_skateboard/Software/BLDC_William/vesc_william/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:13:1: warning: "/*" within comment [-Wcomment]
+ /* Includes ------------------------------------------------------------------*/
+ ^
+Finished building: ../src/main.c
+ 
+Building target: vesc_william.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\William\Documents\Projects\Electric_skateboard\Software\BLDC_William\vesc_william\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "vesc_william.elf" @"objects.list"  
+Finished building target: vesc_william.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "vesc_william.elf" "vesc_william.bin"
+arm-none-eabi-size "vesc_william.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5028	   1084	   1080	   7192	   1c18	vesc_william.elf
+ 
+
+13:05:59 Build Finished (took 2s.942ms)
+
